@@ -1,0 +1,38 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Aug 31 03:51:35 2022
+
+@author: ColeX
+"""
+
+
+def line(length, symbol):
+    if symbol == '':
+        symbol = "*"
+    return(symbol*length)
+
+
+def box_of_hashes(height):
+    hashes = line(10, "#")
+    box = (f"{hashes}\n")
+    return(box*height)
+
+
+def square_of_hashes(side_size):
+    hashes = line(side_size, "#")
+    return((f"{hashes}\n")*side_size)
+
+
+def square(size, madeof):
+    box = line(size, madeof)
+    return((f"{box}\n")*size)
+
+
+def trianglegenerator(dimension):
+    for i in range(dimension+1):
+        yield(line(i, "#"))
+
+
+def triangle(dimension):
+    for i in trianglegenerator(dimension):
+        print(i)
