@@ -1,0 +1,19 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Aug 31 19:56:35 2022
+
+@author: ColeX
+"""
+
+values = [1, 2, 3, 4, 5]
+print(f"The current values are {values}")
+index = int(input("Choose the index to change. type -1 to end.\n>"))
+if index != -1:
+    print(f"Index:{index}")
+    new_num = int(input(f"What should the new value of index {index} be?\n>"))
+    print(f"New Value:{new_num}")
+    values[index] = new_num
+    print(f"The current values are {values}")
+else:
+    if index == -1:
+        print("Index:-1, exiting.")
